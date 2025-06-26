@@ -855,7 +855,9 @@ func main() {
 	log.Printf("   Manual Trigger: POST http://localhost:8080/dev/trigger")
 	port := os.Getenv("PORT")
 	if port == "" {
-			port = "8080" // Local development default
+    port = "8080" // Local development default
 	}
-	r.Run(port)
+
+log.Printf("🚀 Server starting on port %s", port)
+r.Run(":" + port) // Add the colon here!
 }
