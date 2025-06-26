@@ -283,7 +283,7 @@ function Footer() {
 									fontWeight: 'var(--font-weight-bold)',
 									margin: 0,
 								}}>
-								Crypto Analytics Dashboard
+								Crypto Rankings Dashboard
 							</h3>
 						</div>
 						<p
@@ -438,7 +438,7 @@ function Footer() {
 									gap: '0.5rem',
 								}}>
 								<a
-									href='https://github.com/yourusername/crypto-analytics'
+									href='https://github.com/danilobatson/crypto-rankings'
 									target='_blank'
 									rel='noopener noreferrer'
 									style={{
@@ -461,7 +461,7 @@ function Footer() {
 								</a>
 
 								<a
-									href='https://lunarcrush.com'
+									href='https://lunarcrush.com/about/api'
 									target='_blank'
 									rel='noopener noreferrer'
 									style={{
@@ -526,7 +526,7 @@ function Footer() {
 							fontSize: '0.875rem',
 							color: 'rgba(255, 255, 255, 0.6)',
 						}}>
-						© 2025 Crypto Analytics Dashboard. Built for demonstration purposes.
+						© 2025 Crypto Rankings Dashboard. Built for demonstration purposes.
 					</div>
 
 					<div
@@ -632,7 +632,7 @@ function CryptoDashboard() {
 				{/* Hero Header */}
 				<div className='hero-header animate-fade-in'>
 					<div className='hero-content'>
-						<h1 className='hero-title'>Crypto Analytics Dashboard</h1>
+						<h1 className='hero-title'>Crypto Rankings Dashboard</h1>
 						<p className='hero-subtitle'>
 							Real-time cryptocurrency social sentiment and market data powered
 							by cutting-edge technology
