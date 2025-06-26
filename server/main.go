@@ -657,6 +657,8 @@ func main() {
 		AllowOrigins: []string{
 			"http://localhost:3000",
 			"http://localhost:3001",
+			"https://crypto-rankings.vercel.app",
+      "https://crypto-rankings-*.vercel.app",
 		},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization", "Accept"},
@@ -828,35 +830,23 @@ func main() {
 
 	r.Any("/api/inngest", gin.WrapH(inngestClient.Serve()))
 
-	log.Printf("🚀 CLEANED Crypto API Server starting on :8080")
-	log.Printf("================================")
-	log.Printf("🎯 FRONTEND ENDPOINT:")
-	log.Printf("   GET /api/crypto/data - 11 working metrics only")
-	log.Printf("")
-	log.Printf("🗑️  REMOVED PROBLEMATIC METRICS:")
-	log.Printf("   • contributors_active (was showing 0)")
-	log.Printf("   • galaxy_score (parsing issues)")
-	log.Printf("   • posts_active (social mentions issues)")
-	log.Printf("   • sentiment (data quality issues)")
-	log.Printf("   • topic_rank (inconsistent data)")
-	log.Printf("")
-	log.Printf("✅ WORKING METRICS (11):")
-	log.Printf("   • market_cap, price, volume_24h")
-	log.Printf("   • percent_change_1h, percent_change_24h, percent_change_7d")
-	log.Printf("   • alt_rank, interactions")
-	log.Printf("   • social_dominance, market_dominance, circulating_supply")
-	log.Printf("")
-	log.Printf("📊 SYSTEM INFO:")
-	log.Printf("   Health: http://localhost:8080/health")
-	log.Printf("   Info: http://localhost:8080/api/crypto/info")
-	log.Printf("   Status: http://localhost:8080/")
-	log.Printf("")
-	log.Printf("🔧 DEV TOOLS:")
-	log.Printf("   Manual Trigger: POST http://localhost:8080/dev/trigger")
 	port := os.Getenv("PORT")
 	if port == "" {
     port = "8080" // Local development default
 	}
+	
+	log.Printf("🚀 CLEANED Crypto API Server starting on :8080")
+	log.Printf("================================")
+	log.Printf("🎯 FRONTEND ENDPOINT:")
+	log.Printf("")
+	log.Printf("📊 SYSTEM INFO:")
+	log.Printf("   Health: http://localhost:%s/health", port)
+	log.Printf("   Info: http://localhost:%s/api/crypto/info", port)
+	log.Printf("   Status: http://localhost:%s/", port)
+	log.Printf("")
+	log.Printf("🔧 DEV TOOLS:")
+	log.Printf("   Manual Trigger: POST http://localhost:%s/dev/trigger", port)
+
 
 log.Printf("🚀 Server starting on port %s", port)
 r.Run(":" + port) // Add the colon here!
