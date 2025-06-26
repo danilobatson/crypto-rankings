@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, } from 'react';
+import { useState } from 'react';
 import {
 	QueryClient,
 	QueryClientProvider,
@@ -1023,7 +1023,7 @@ function CryptoDashboard() {
 													.slice(0, 10)
 													.map((item, index) => (
 														<div
-															key={`${item.symbol}-${index}`}
+															key={`${item?.symbol || item?.name}-${index}`}
 															className='ranking-item'>
 															<div className='ranking-left'>
 																<div className='ranking-position'>
@@ -1043,7 +1043,6 @@ function CryptoDashboard() {
 																<div className='ranking-value'>
 																	{item.value}
 																</div>
-																
 															</div>
 														</div>
 													))}
