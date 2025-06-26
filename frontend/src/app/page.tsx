@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, } from 'react';
 import {
 	QueryClient,
 	QueryClientProvider,
@@ -23,10 +23,8 @@ import {
 	PlayIcon,
 	GitHubLogoIcon,
 	ExternalLinkIcon,
-	CodeIcon,
 	StarIcon,
 } from '@radix-ui/react-icons';
-import { clsx } from 'clsx';
 
 // Create a client with optimized settings
 const queryClient = new QueryClient({
@@ -595,7 +593,7 @@ function CryptoDashboard() {
 		} catch (err) {
 			setToastMessage({
 				title: 'Trigger failed',
-				description: 'Unable to trigger manual data fetch',
+				description: `Unable to trigger manual data fetch: ${err}`,
 				type: 'error',
 			});
 			setToastOpen(true);
