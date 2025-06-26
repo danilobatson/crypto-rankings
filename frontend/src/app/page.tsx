@@ -545,7 +545,6 @@ function Footer() {
 								gap: '0.25rem',
 							}}>
 							<StarIcon className='w-4 h-4 text-yellow-400' />
-							<span>Inngest Interview Project</span>
 						</div>
 					</div>
 				</div>
