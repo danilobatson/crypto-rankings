@@ -1023,7 +1023,7 @@ function CryptoDashboard() {
 													.slice(0, 10)
 													.map((item, index) => (
 														<div
-															key={`${item.Symbol}-${index}`}
+															key={`${item.symbol}-${index}`}
 															className='ranking-item'>
 															<div className='ranking-left'>
 																<div className='ranking-position'>
@@ -1031,21 +1031,19 @@ function CryptoDashboard() {
 																</div>
 																<div className='ranking-info'>
 																	<div className='ranking-name'>
-																		{item.Name}
+																		{item.name}
 																	</div>
 																	<div className='ranking-symbol'>
-																		{item.Symbol?.toUpperCase()}
+																		{item.symbol?.toUpperCase()}
 																	</div>
 																</div>
 															</div>
 
 															<div className='ranking-right'>
 																<div className='ranking-value'>
-																	{item.Value}
+																	{item.value}
 																</div>
-																<div className='ranking-metric'>
-																	{selectedMetricOption.category}
-																</div>
+																
 															</div>
 														</div>
 													))}
