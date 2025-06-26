@@ -853,6 +853,9 @@ func main() {
 	log.Printf("")
 	log.Printf("🔧 DEV TOOLS:")
 	log.Printf("   Manual Trigger: POST http://localhost:8080/dev/trigger")
-
-	r.Run(":8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+			port = "8080" // Local development default
+	}
+	r.Run(port)
 }
