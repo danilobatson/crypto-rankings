@@ -6,7 +6,7 @@ A production-ready social analytics API built with **Go + Inngest + Redis Cloud 
 
 ## 🎯 Live Demo
 
-**🌐 Frontend Dashboard:** [View Live Demo](https://crypto-rankings-2vobnla22-danilobatsons-projects.vercel.app/)
+**🌐 Frontend Dashboard:** [View Live Demo](https://crypto-rankings.vercel.app/)
 
 **🔧 API Health Check:** [Backend Status](https://crypto-rankings.onrender.com/health)
 
@@ -234,7 +234,7 @@ The backend is deployed on **Render's free tier**:
 
 The frontend is deployed on **Vercel**:
 
-- **URL:** `https://crypto-rankings-2vobnla22-danilobatsons-projects.vercel.app/`
+- **URL:** `https://crypto-rankings.vercel.app/`
 - **Performance:** Fast global CDN delivery
 - **Auto-deploy:** On git push to main branch
 
@@ -333,7 +333,7 @@ cd frontend && npm run dev
 
 ### Live Application
 
-- **Frontend:** [https://crypto-rankings-2vobnla22-danilobatsons-projects.vercel.app/](https://crypto-rankings-2vobnla22-danilobatsons-projects.vercel.app/)
+- **Frontend:** [https://crypto-rankings.vercel.app/](https://crypto-rankings.vercel.app/)
 - **Backend API:** [https://crypto-rankings.onrender.com](https://crypto-rankings.onrender.com)
 - **Health Check:** [https://crypto-rankings.onrender.com/health](https://crypto-rankings.onrender.com/health)
 
