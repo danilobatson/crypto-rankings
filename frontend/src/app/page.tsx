@@ -1023,7 +1023,7 @@ function CryptoDashboard() {
 													.slice(0, 10)
 													.map((item, index) => (
 														<div
-															key={`${item?.name}-${index}`}
+															key={`${item?.Symbol}-${index}`}
 															className='ranking-item'>
 															<div className='ranking-left'>
 																<div className='ranking-position'>
