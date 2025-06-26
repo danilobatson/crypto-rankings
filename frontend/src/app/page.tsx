@@ -39,10 +39,10 @@ const queryClient = new QueryClient({
 });
 
 interface CryptoItem {
-	Name: string;
-	Symbol: string;
-	Value: string;
-	Sort: string;
+	name: string;
+	symbol: string;
+	value: string;
+	sort: string;
 }
 
 interface MetricData {
@@ -1023,7 +1023,7 @@ function CryptoDashboard() {
 													.slice(0, 10)
 													.map((item, index) => (
 														<div
-															key={`${item?.Symbol}-${index}`}
+															key={`${item?.symbol}-${index}`}
 															className='ranking-item'>
 															<div className='ranking-left'>
 																<div className='ranking-position'>
