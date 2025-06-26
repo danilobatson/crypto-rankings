@@ -657,9 +657,13 @@ func main() {
 		AllowOrigins: []string{
 			"http://localhost:3000",
 			"http://localhost:3001",
+			// Add your specific Vercel domain
+			"https://crypto-rankings-2vobnla22-danilobatsons-projects.vercel.app",
+			// Add the production domain (when you get a custom domain)
 			"https://crypto-rankings.vercel.app",
-      "https://crypto-rankings-*.vercel.app",
-		},
+			// Wildcard for Vercel preview deployments (optional)
+			"https://crypto-rankings-*.vercel.app",
+	},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization", "Accept"},
 		AllowCredentials: true,
@@ -834,7 +838,7 @@ func main() {
 	if port == "" {
     port = "8080" // Local development default
 	}
-	
+
 	log.Printf("🚀 CLEANED Crypto API Server starting on :8080")
 	log.Printf("================================")
 	log.Printf("🎯 FRONTEND ENDPOINT:")
