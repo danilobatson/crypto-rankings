@@ -20,7 +20,7 @@ A production-ready social analytics API built with **Go + Inngest + Redis Cloud 
 
 ```mermaid
 graph TD
-    A[LunarCrush MCP] --> B[Inngest Background Jobs]
+    A[LunarCrush API] --> B[Inngest Background Jobs]
     B --> C[Redis Cloud Cache]
     C --> D[React Dashboard]
 ```
@@ -28,7 +28,7 @@ graph TD
 ### 🔥 Key Features
 
 - **⚡ High Performance**: Go backend with Redis Cloud caching (3-5 second response times)
-- **🤖 AI-Ready**: LunarCrush MCP integration for seamless AI assistant access
+- **🤖 AI-Ready**: LunarCrush API integration for seamless AI assistant access
 - **🔄 Background Processing**: Inngest workflows with error recovery and retries
 - **📊 Real-time Analytics**: 11 cryptocurrency social sentiment metrics
 - **🛡️ Production Ready**: Comprehensive error handling and graceful degradation
@@ -42,7 +42,7 @@ graph TD
 - **🏎️ Go 1.24** - High-performance API server with Gin framework
 - **🔴 Redis Cloud** - Cloud-hosted Redis with 15-minute TTL caching
 - **⚙️ Inngest** - Background job processing with error recovery
-- **🔗 LunarCrush MCP** - Model Context Protocol for AI-ready data access
+- **🔗 LunarCrush API** - For latest cryptocurrency social analytics
 - **☁️ Render** - Backend deployment platform (free tier with cold starts)
 
 ### Frontend Stack
