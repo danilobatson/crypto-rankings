@@ -605,12 +605,19 @@ function CryptoDashboard() {
 	const currentMetricData = data?.all_metrics?.[selectedMetric];
 
 	const formatLastUpdate = (timestamp: string) => {
-		try {
-			return new Date(timestamp).toLocaleString();
-		} catch {
-			return 'Unknown';
-		}
-	};
+	try {
+		// If timestamp doesn't have timezone info, treat it as UTC
+		const date = timestamp.endsWith('Z') || timestamp.includes('+') || timestamp.includes('-', 10)
+			? new Date(timestamp)
+			: new Date(timestamp + 'Z');
+		
+		return date.toLocaleString(undefined, {
+			timeZoneName: 'short'
+		});
+	} catch {
+		return 'Unknown';
+	}
+};
 
 	if (isLoading) {
 		return (
